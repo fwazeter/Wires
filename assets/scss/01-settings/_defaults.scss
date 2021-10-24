@@ -15,20 +15,26 @@
  * @since 0.0.1
  */
 @keyframes smoothscrollfix1 {
-  from, to { scroll-behavior: smooth; }
+	from,
+	to {
+		scroll-behavior: smooth;
+	}
 }
 
 @keyframes smoothscrollfix2 {
-  from, to { scroll-behavior: smooth; }
+	from,
+	to {
+		scroll-behavior: smooth;
+	}
 }
 
 html {
-  animation: smoothscrollfix1 1s;
+	animation: smoothscrollfix1 1s;
 }
 
 html:focus-within {
-  animation-name: smoothscrollfix2;
-  scroll-behavior: smooth;
+	animation-name: smoothscrollfix2;
+	scroll-behavior: smooth;
 }
 
 /**
@@ -39,7 +45,7 @@ html:focus-within {
  */
 ul[role='list'],
 ol[role='list'] {
-  list-style: none;
+	list-style: none;
 }
 
 /**
@@ -49,7 +55,7 @@ ol[role='list'] {
  * @since 0.0.1
  */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+	text-decoration-skip-ink: auto;
 }
 
 /**
@@ -64,7 +70,7 @@ a:not([class]) {
  * @since 0.0.1
  */
 img {
-  display: block;
+	display: block;
 }
 
 /**
@@ -79,7 +85,7 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+	font: inherit;
 }
 
 /**
@@ -92,12 +98,12 @@ select {
  * @since 0.0.1
  */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }
