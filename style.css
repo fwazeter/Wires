@@ -15,7 +15,8 @@ Text Domain: wires
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-@import "assets/css/src/_reset.css";
-@import "assets/css/src/_global-defaults.css";
-@import "assets/css/src/_editor.css";
-@import "assets/css/src/_typography.css";
+
+/**------------------------------------------------------------------
+ * This file only serves as the theme file-header. Styles are located
+ * in /assets/src dir and minified to compile to /assets/css.
+ --------------------------------------------------------------------*/

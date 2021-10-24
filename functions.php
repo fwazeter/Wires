@@ -31,8 +31,8 @@ add_action( 'after_setup_theme', 'wires_setup' );
 if ( ! function_exists( 'wires_styles' ) ) {
     function wires_styles() {
         wp_enqueue_style(
-            'wires-common',
-            get_theme_file_uri( 'style.css' ),
+            'wires-style',
+            get_theme_file_uri( 'assets/css/style.css' ),
             '',
             WIRES_VERSION
         );
@@ -49,8 +49,8 @@ add_action( 'wp_enqueue_scripts', 'wires_styles' );
 if ( ! function_exists( 'wires_editor_styles' ) ) {
     function wires_editor_styles() {
         wp_enqueue_style(
-            'wires-common',
-            get_theme_file_uri( 'style.css' ),
+            'wires-style-editor',
+            get_theme_file_uri( 'assets/css/style-editor.css' ),
             '',
             WIRES_VERSION
         );
