@@ -1,0 +1,144 @@
+/**
+ * BASE SIZE
+ * All calculations are based off of the base size. 1rem
+ * is recommended because that is the same as root font sizes.
+ * We're handling this here because of performance with custom-props.
+ */
+$wires-base-size: 1rem !default;
+
+/**
+ * SIZE SCALE
+ * This is the size scale that powers utilities and is relevant for
+ * margin, font-size, padding, etc. All items are calculated off
+ * of the base size, changing that will cascade across project.
+ *
+ * Default value using "major third" type scaling, synchronizing
+ * with an early draft WP type scale.
+ *
+ * Starting with "40" as a base, since "400" font weight is considered
+ * "Normal" size.
+ *
+ * Ref 1: https://www.modularscale.com/?1&em&1.25
+ * Ref 2: https://make.wordpress.org/design/2019/10/11/proposal-a-consistent-type-scale-for-wordpress/
+ */
+$wires-size-scale: (
+	'30': $wires-base-size * 0.75,
+	// 12 ** modified from * 0.8
+	'40': $wires-base-size,
+	// 16
+	'50': $wires-base-size * 1.25,
+	// 20
+	'60': $wires-base-size * 1.5,
+	// 24 ** modified from * 1.6
+	'70': $wires-base-size * 2,
+	// 32
+	'80': $wires-base-size * 3 // 48,
+) !default;
+
+/**
+ * COLORS
+ * Maybe we can import somehow from theme.json custom props?
+ * TODO: maybe configure just a manual semantic way?
+ */
+$wires-colors: () !default;
+
+/**
+ * CORE CONFIG
+ * This powers utility class generation to breakpoints to
+ * enable / disable pre-built components & utilities.
+ */
+$wires-config: (
+	'background': (),
+	// Maybe pull from theme.json?
+	'color': (),
+	// same as background.
+	'box': (
+        'items': (
+            'block': 'block',
+            // configures a box, like every-layout.
+            'flex': 'flex',
+            'hide': 'none',
+            'show': 'inherit',
+        ),
+        'output': 'responsive',
+        'property': 'display',
+    ),
+	'font': (
+		'items': (
+			'base': '' // e.g. font-families.,
+		),
+		'output': 'standard',
+		'property': 'font-family',
+	),
+	// can pull from theme.json.
+	'gap-top': (
+        'items': $wires-size-scale,
+        'output': 'standard',
+        'property': 'margin-block-start',
+    ),
+	'gap-left': (
+		'items': $wires-size-scale,
+		'output': 'standard',
+		'property': 'margin-inline-start',
+	),
+	'gap-bottom': (
+		'items': $wires-size-scale,
+		'output': 'standard',
+		'property': 'margin-block-end',
+	),
+	'gap-right': (
+		'items': $wires-size-scale,
+		'output': 'standard',
+		'property': 'margin-inline-end',
+	),
+	'pad-top': (
+		'items': $wires-size-scale,
+		'output': 'standard',
+		'property': 'padding-block-start',
+	),
+	'pad-left': (
+		'items': $wires-size-scale,
+		'output': 'standard',
+		'property': 'padding-inline-start',
+	),
+	'pad-bottom': (
+		'items': $wires-size-scale,
+		'output': 'standard',
+		'property': 'padding-block-end',
+	),
+	'pad-right': (
+		'items': $wires-size-scale,
+		'output': 'standard',
+		'property': 'padding-inline-end',
+	),
+	'stack': (
+		'items': (
+			'30': 0,
+			'40': 10,
+			'50': 20,
+			'60': 30,
+			'70': 40,
+		),
+		'output': 'standard',
+		'property': 'z-index',
+	),
+	'text': (),
+	// Maybe from JSON (size).
+	'weight': (),
+	// maybe from json.
+	'width': (
+        'items': (
+            'full': '100%',
+            'half': percentage(1/2),
+            'third': percentage(1/3),
+            'quarter': percentage(1/4),
+        ),
+        'output': 'responsive',
+        'property': 'width',
+    ),
+	'breakpoints': (
+		'medium': '(min-width: 782px)',
+		'small': '(min-width: 600px)',
+		'mobile': '(min-width: 480px)',
+	),
+) !default;
