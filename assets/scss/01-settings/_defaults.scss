@@ -15,39 +15,20 @@
  * @since 0.0.1
  */
 @keyframes smoothscrollfix1 {
-    from, to { scroll-behavior: smooth; }
+  from, to { scroll-behavior: smooth; }
 }
 
 @keyframes smoothscrollfix2 {
-    from, to { scroll-behavior: smooth; }
+  from, to { scroll-behavior: smooth; }
 }
 
 html {
-    animation: smoothscrollfix1 1s;
+  animation: smoothscrollfix1 1s;
 }
 
 html:focus-within {
-    animation-name: smoothscrollfix2;
-    scroll-behavior: smooth;
-}
-
-/**
- * Body style optimizations.
- * 1. Force <body> to take up the entire viewport, even if empty.
- * 2. use optimizeSpeed for text-rendering rather than optimizeLegibility.
- *
- * Optimize legibility can lead to ~30 second load times. Best for
- * one off uses.
- *
- * We set line-height defaults in theme.json. 1.5 > 1.2 for accessibility.
- *
- * Reference: https://marco.org/2012/11/15/text-rendering-optimize-legibility
- * Old, but still relevant page speed optimization.
- * @since 0.0.1
- */
-body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
+  animation-name: smoothscrollfix2;
+  scroll-behavior: smooth;
 }
 
 /**
@@ -58,7 +39,7 @@ body {
  */
 ul[role='list'],
 ol[role='list'] {
-    list-style: none;
+  list-style: none;
 }
 
 /**
@@ -68,7 +49,7 @@ ol[role='list'] {
  * @since 0.0.1
  */
 a:not([class]) {
-    text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /**
@@ -83,7 +64,7 @@ a:not([class]) {
  * @since 0.0.1
  */
 img {
-    display: block;
+  display: block;
 }
 
 /**
@@ -98,7 +79,7 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
 /**
@@ -111,12 +92,12 @@ select {
  * @since 0.0.1
  */
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

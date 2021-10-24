@@ -15,18 +15,14 @@
   "devDependencies": {
     "@wordpress/stylelint-config": "^19.1.0",
     "stylelint": "^13.7.0",
-    "gulp": "^4.0.2",
-    "gulp-postcss": "^9.0.0",
-    "postcss": "^8.3.6",
-    "cssnano": "^5.0.8",
-    "postcss-calc": "^7.0.1",
-    "postcss-import": "^12.0.1",
-    "postcss-partial-import": "^4.1.0",
-    "postcss-preset-env": "^6.7.0",
-    "postcss-reporter": "^6.0.1",
-    "postcss-markdown": "^0.36.0"
+    "sass": "^1.26.10",
+    "gorko": "^0.2.1"
   },
   "scripts": {
-    "lint:css": "stylelint **/*.css --fix -i .gitignore"
+    "lint:css": "stylelint **/*.css --fix -i .gitignore",
+    "style": "npx sass assets/scss/style.scss assets/css/style.css --watch",
+    "editor": "npx sass assets/scss/style-editor.scss assets/css/style-editor.css",
+    "build": "npx sass assets/scss/style.scss assets/css/style.css --style=compressed",
+    "editor-build": "npx sass assets/scss/style-editor.scss assets/css/style-editor.css --style=compressed"
   }
 }
