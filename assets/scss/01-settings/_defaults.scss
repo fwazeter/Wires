@@ -14,6 +14,7 @@
  * Until Fixed: https://bugs.chromium.org/p/chromium/issues/detail?id=866694
  * @since 0.0.1
  */
+/**
 @keyframes smoothscrollfix1 {
 	from,
 	to {
@@ -37,6 +38,9 @@ html:focus-within {
 	scroll-behavior: smooth;
 }
 
+Temporarily disabling - this is casuing spam recalculations of animation on load.
+disabled v0.0.3
+-------------------------------------------*/
 /**
  * Accessibility fix for list elements with role=["list"] attribute.
  *
@@ -97,6 +101,7 @@ select {
  * Ref: https://css-tricks.com/introduction-reduced-motion-media-query/
  * @since 0.0.1
  */
+/**
 @media (prefers-reduced-motion: reduce) {
 	*,
 	*::before,
@@ -107,3 +112,7 @@ select {
 		scroll-behavior: auto !important;
 	}
 }
+
+Temporarily disabling - this is causing spam calculations.
+disabled v0.0.3
+--------------------------------------*/

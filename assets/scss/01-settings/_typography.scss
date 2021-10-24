@@ -44,20 +44,6 @@
  * Ref: https://www.client9.com/css-system-font-stack-monospace-v2/
  * Ref: https://qwtel.com/posts/software/the-monospaced-system-ui-css-font-stack/
  */
-:root {
-	--serif: Baskerville, 'Georgia Pro', 'DejaVu Serif', 'Bitstream Vera Serif',
-		'Liberation Serif', Georgia, serif, 'Apple Color Emoji',
-		'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-
-	--sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Ubuntu',
-		'DejaVu Sans', 'Nimbus Sans L', 'Helvetica Neue', sans-serif,
-		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-		'Noto Color Emoji';
-
-	--monospace: ui-monospace, SFMono-Regular, SFMono, Menlo, Consolas,
-		'DejaVu Sans Mono', 'Liberation Mono', 'Nimbus Mono L', 'Courier New',
-		monospace;
-}
 
 /**
  * Limit the width of text-based elements
