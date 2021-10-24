@@ -1,0 +1,18 @@
+/**
+ * Theme Primary Style Sheet.
+ *
+ * @since 0.0.2
+ *
+ * SETTINGS
+ * _reset.css............................Slim, modern CSS Reset
+ * _defaults.css.........................Basic Global Style Defaults
+ * _typography...........................Global Typography Settings
+ *
+ * COMPOSITION
+ *
+ * UTILITIES
+ *
+ * BLOCKS
+ *
+ */
+@import '/01-settings/index.css';

@@ -1,0 +1,32 @@
+{
+  "name": "wires",
+  "version": "0.0.1",
+  "description": "Block designed for WordPress in anticipation of 5.9, leveraging full site editing and using theme.json as design system.",
+  "author": "Frank Wazeter",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://github.com/fwazeter/Wires",
+  "bugs": {
+    "url": "https://github.com/fwazeter/Wires/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fwazeter/Wires.git"
+  },
+  "devDependencies": {
+    "@wordpress/stylelint-config": "^19.1.0",
+    "stylelint": "^13.7.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.0",
+    "postcss": "^8.3.6",
+    "cssnano": "^5.0.8",
+    "postcss-calc": "^7.0.1",
+    "postcss-import": "^12.0.1",
+    "postcss-partial-import": "^4.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-reporter": "^6.0.1",
+    "postcss-markdown": "^0.36.0"
+  },
+  "scripts": {
+    "lint:css": "stylelint **/*.css --fix -i .gitignore"
+  }
+}

@@ -74,10 +74,10 @@ a:not([class]) {
 /**
  * Make images a block element to avoid weird gaps, such as
  * at the bottom of images. IMG elements default to "inline-block"
- * but we almost always use images like blocks.
+ * but we almost always use images like 04-blocks.
  *
  * Note: We do not have to set max-width: 100%; because
- * core blocks add this by default.
+ * core 04-blocks add this by default.
  *
  * Ref: https://www.w3schools.com/cssref/css_default_values.asp
  * @since 0.0.1
