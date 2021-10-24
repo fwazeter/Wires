@@ -1,0 +1,16 @@
+# Misc
+*.log
+npm-debug.*
+*.scssc
+*.swp
+.DS_Store
+Thumbs.db
+.sass-cache
+.env
+.cache
+# Intellij settings.
+.idea
+
+# Node modules and output
+node_modules
+dist

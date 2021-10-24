@@ -1,0 +1,122 @@
+/**
+ * Sets smart style defaults used globally across the theme or
+ * as alternatives to relying on theme.json.
+ */
+/**
+ * Fixes smooth scroll bug, predominantly on Chromium
+ * based browsers. This fix keeps things working in Firefox, etc
+ * as well without having to append tabindex="-1" to each element.
+ *
+ * Animation used because Firefox & Chromium simultaneously add & remove
+ * "focus" effects on page jumps.
+ *
+ * Reference: https://schepp.dev/posts/smooth-scrolling-and-page-search/
+ * Until Fixed: https://bugs.chromium.org/p/chromium/issues/detail?id=866694
+ * @since 0.0.1
+ */
+@keyframes smoothscrollfix1 {
+    from, to { scroll-behavior: smooth; }
+}
+
+@keyframes smoothscrollfix2 {
+    from, to { scroll-behavior: smooth; }
+}
+
+html {
+    animation: smoothscrollfix1 1s;
+}
+
+html:focus-within {
+    animation-name: smoothscrollfix2;
+    scroll-behavior: smooth;
+}
+
+/**
+ * Body style optimizations.
+ * 1. Force <body> to take up the entire viewport, even if empty.
+ * 2. use optimizeSpeed for text-rendering rather than optimizeLegibility.
+ *
+ * Optimize legibility can lead to ~30 second load times. Best for
+ * one off uses.
+ *
+ * We set line-height defaults in theme.json. 1.5 > 1.2 for accessibility.
+ *
+ * Reference: https://marco.org/2012/11/15/text-rendering-optimize-legibility
+ * Old, but still relevant page speed optimization.
+ * @since 0.0.1
+ */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+/**
+ * Accessibility fix for list elements with role=["list"] attribute.
+ *
+ * Reference: https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html
+ * @since 0.0.1
+ */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/**
+ * Setting basic underline render to be more readable when
+ * there is no class set to a link.
+ *
+ * @since 0.0.1
+ */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/**
+ * Make images a block element to avoid weird gaps, such as
+ * at the bottom of images. IMG elements default to "inline-block"
+ * but we almost always use images like blocks.
+ *
+ * Note: We do not have to set max-width: 100%; because
+ * core blocks add this by default.
+ *
+ * Ref: https://www.w3schools.com/cssref/css_default_values.asp
+ * @since 0.0.1
+ */
+img {
+    display: block;
+}
+
+/**
+ * Blocks, such as core/button block don't use <button> or
+ * <input> tags by default, so we set them to inherit
+ * font properties for when they're inevitably used.
+ *
+ * Ref: https://css-tricks.com/almanac/properties/f/font/#font-shorthand-gotchas
+ * @since 0.0.1
+ */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/**
+ * If a user selects reduced-motion as an option,
+ * we want to honor their system preferences, so
+ * overwrite any animation and transition properties to
+ * reflect their setting.
+ *
+ * Ref: https://css-tricks.com/introduction-reduced-motion-media-query/
+ * @since 0.0.1
+ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

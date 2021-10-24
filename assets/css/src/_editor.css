@@ -1,0 +1,9 @@
+/**
+ * Defines editor specific styles.
+ */
+/**
+ * TODO: remove editor extra padding.
+ */
+html .editor-styles-wrapper {
+    margin: 0;
+}
