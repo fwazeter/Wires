@@ -15,10 +15,23 @@
  * than through theme.json to reduce clutter / allow for
  * more flexible customization there.
  *
- * Keeping body as non-overrideable by theme.json. Tags temp removed, potentially in favor of theme.json:
- * p,h1,h2,h3,h4,h5,h6,li,figure,figcaption,blockquote,dl,dd,.wp-block-image
  * @since 0.0.1
  */
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
 /**
  * Body style optimizations.
  * 1. Force <body> to take up the entire viewport, even if empty.
@@ -34,7 +47,6 @@
  * @since 0.0.1
  */
 body {
-	margin: 0;
 	min-height: 100vh;
 	text-rendering: optimizeSpeed;
 }

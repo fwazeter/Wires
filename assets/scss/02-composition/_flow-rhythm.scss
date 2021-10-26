@@ -1,0 +1,25 @@
+body {
+  /* Prevent horizontal overflow */
+  overflow-x: hidden;
+  padding-block-end: var(--wp--custom--size-scale--60);
+}
+
+/* article div by default applies margin top to children */
+article > * + * {
+  margin-block-start: 1em;
+}
+
+/* set shared borders for table cells by default */
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+/* Each focusable element gets consistent treatment */
+:focus {
+  outline: 2px dotted;
+  outline-offset: 0.25rem;
+}

@@ -67,6 +67,9 @@ a:not([class]) {
  * at the bottom of images. IMG elements default to "inline-block"
  * but we almost always use images like blocks.
  *
+ * Consider adding <picture> element here and extending the image block
+ * because image has some considerable power.
+ *
  * Note: We do not have to set max-width: 100%; because
  * core blocks add this by default.
  *
@@ -75,6 +78,7 @@ a:not([class]) {
  */
 img {
 	display: block;
+	max-width: 100%;
 }
 
 /**
