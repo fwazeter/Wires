@@ -1,0 +1,54 @@
+/**
+ * WP Quote Block CSS.
+ * Replaces style.css & theme.css
+ *
+ * @url https://github.com/WordPress/gutenberg/blob/trunk/packages/block-library/src/quote/style.scss
+ * @url https://github.com/WordPress/gutenberg/blob/trunk/packages/block-library/src/quote/theme.scss
+ * @since 0.0.3
+ */
+.wp-block-quote {
+    --wp--custom--flow--rate: var(--wp--custom--space-1);
+
+    border-inline-start: var(--wp--custom--border--size) solid var(--wp--preset--color--primary);
+    padding-inline-start: var(--wp--custom--flow--rate);
+}
+
+/* footer was originally included */
+.wp-block-quote cite {
+    display: block;
+    position: relative;
+    font-size: var(--wp--preset--font-size--normal);
+}
+
+.wp-block-quote.has-text-align-right {
+    border-inline-start: 0;
+    border-inline-end: var(--wp--custom--border--size) solid var(--wp--preset--color--primary);
+    padding-inline-start: 0;
+    padding-inline-end: var(--wp--custom--flow--rate);
+}
+
+.wp-block-quote.has-text-align-center {
+    --wp--custom--border--size: 0;
+    --wp--custom--flow--rate: 0;
+}
+
+.wp-block-quote.is-style-large {
+    --wp--custom--border--size: 0;
+}
+
+/* Had is-large modifier also in source */
+
+.wp-block-quote.is-style-large p {
+    margin-block-start: 0;
+    font-size: var(--wp--preset--font-size--large);
+    font-style: italic;
+    line-height: var(--wp--custom--line-height--medium);
+}
+
+.wp-block-quote.is-style-large cite {
+    --wp--preset--font-size--normal: var(--wp--preset--font-size--medium);
+
+    text-align: right;
+}
+
+

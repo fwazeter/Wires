@@ -1,1 +1,119 @@
-*,*::before,*::after{box-sizing:border-box}body{margin:0;min-height:100vh;text-rendering:optimizeSpeed}ul[role=list],ol[role=list]{list-style:none}a:not([class]){text-decoration-skip-ink:auto}img{display:block}input,button,textarea,select{font:inherit}p,li{max-width:60ch}h1{max-width:15ch}h2,h3{max-width:25ch}/*# sourceMappingURL=style.css.map */
+/**
+ * Theme Primary Style Sheet.
+ *
+ * @since 0.0.2
+ *
+ * GLOBALS
+ * _body.css............................Global styles on *, HTML, body & focus effects.
+ * _misc.css.........................Misc element specific globals that don't fit cleanly themselves.
+ * _flow.............................Flow & Rhythm properties.
+ *
+ * COMPOSITION
+ *
+ * UTILITIES
+ *
+ * BLOCKS
+ *
+ */
+/**
+ * CSS properties that affect the theme on a global
+ * scale that are not available or don't want to be set via
+ * Theme.JSON
+ *
+ * @since 0.0.3
+ */
+/**
+ * Includes :root, *, html & body affecting
+ * tags in one place to avoid overly duplicating tag usage.
+ *
+ * Modern reset based on the provided link.
+ * @url https://piccalil.li/blog/a-modern-css-reset/
+ * @since 0.0.3 - reorganizing structure.
+ * @since 0.0.1
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:focus {
+  outline: calc(var(--wp--custom--border--size) * 0.5) dotted;
+  outline-offset: var(--wp--custom--border--size);
+}
+
+/**
+ * Miscellaneous tags and attributes not handled in blocks, theme.json
+ * or large enough to have their own file.
+ */
+/* Remove default margin - may not need, do we have dl, dd tags in blocks? */
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Inherit fonts for inputs and buttons - button block uses <a> tag */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* both pre and code have to be established here to override
+   if these aren't set, the browser overrides the block style font-family
+   but if they are set, then they can be overridden.
+*/
+pre,
+code {
+  font-family: var(--wp--preset--font-family--mono);
+}
+
+/**
+ * Rhythm and flow of spacing, etc related properties.
+ *
+ * @since 0.0.3
+ */
+/* Natural flow and rhythm in articles by default */
+/* Stack Compositions */
+/**
+ * WordPress's auto-generated wp-container- class
+ * acts like a stack element with an owl selector.
+ *
+ * The inheritance of margin-top from wp-container-*'s
+ * owl selector adds additional margin when the container
+ * has a background to children. This works for all but
+ * the first child, so we're being specific to the container
+ * element, since it handles 'stack' logic.
+ *
+ */
+[class*=wp-container-].has-background > :first-child {
+  margin-top: 0;
+}
+
+/* Box Compositions */
+.has-background {
+  padding: var(--wp--custom--flow--rate);
+}
+
+/*# sourceMappingURL=style.css.map */

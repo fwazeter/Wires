@@ -1,0 +1,12 @@
+/**
+ * WP List Block CSS.
+ * Replaces style.css
+ *
+ * @url https://github.com/WordPress/gutenberg/blob/trunk/packages/block-library/src/list/style.scss
+ * @since 0.0.3
+ */
+ul,
+ol {
+    --wp--custom--flow--rate: var(--wp--custom--space-2);
+    padding-inline-start: var(--wp--custom--flow--rate);
+}

@@ -1,0 +1,40 @@
+/**
+ * Includes :root, *, html & body affecting
+ * tags in one place to avoid overly duplicating tag usage.
+ *
+ * Modern reset based on the provided link.
+ * @url https://piccalil.li/blog/a-modern-css-reset/
+ * @since 0.0.3 - reorganizing structure.
+ * @since 0.0.1
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus {
+  outline: calc(var(--wp--custom--border--size) * .5) dotted;
+  outline-offset: var(--wp--custom--border--size);
+}

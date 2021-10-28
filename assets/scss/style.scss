@@ -3,10 +3,10 @@
  *
  * @since 0.0.2
  *
- * SETTINGS
- * _reset.css............................Slim, modern CSS Reset
- * _defaults.css.........................Basic Global Style Defaults
- * _typography...........................Global Typography Settings
+ * GLOBALS
+ * _body.css............................Global styles on *, HTML, body & focus effects.
+ * _misc.css.........................Misc element specific globals that don't fit cleanly themselves.
+ * _flow.............................Flow & Rhythm properties.
  *
  * COMPOSITION
  *
@@ -15,4 +15,4 @@
  * BLOCKS
  *
  */
-@import '01-settings/index.scss';
+@import "01-globals";

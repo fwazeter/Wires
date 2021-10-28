@@ -1,0 +1,67 @@
+/**
+ * WP Table Block CSS.
+ * Replaces style.css & theme.css
+ *
+ * @url https://github.com/WordPress/gutenberg/blob/trunk/packages/block-library/src/table/style.scss
+ * @url https://github.com/WordPress/gutenberg/blob/trunk/packages/block-library/src/table/theme.scss
+ * @since 0.0.3
+ */
+.wp-block-table {
+    --wp--custom--border--size: calc(var(--wp--custom--space-025) * .5);
+    --wp--custom--flow--rate: var(--wp--custom--space-05);
+    overflow-x: auto;
+}
+
+.wp-block-table table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+.wp-block-table td,
+.wp-block-table th,
+.wp-block-table tr {
+    padding: var(--wp--custom--flow--rate);
+}
+
+.wp-block-table .has-border-color > *,
+.wp-block-table .has-border-color td,
+.wp-block-table .has-border-color th,
+.wp-block-table .has-border-color tr {
+    border-color: inherit;
+    border: var(--wp--custom--border--size) solid;
+}
+
+.wp-block-table .has-border-color thead {
+    border-block-end: var(--wp--custom--space-025) solid;
+}
+
+.wp-block-table .has-border-color tfoot {
+    border-block-start: var(--wp--custom--space-025) solid;
+}
+
+.wp-block-table .has-fixed-layout {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.wp-block-table.aligncenter,
+.wp-block-table.alignleft,
+.wp-block-table.alignright {
+    display: table;
+    width: auto;
+}
+
+.wp-block-table.is-style-stripes {
+    border-spacing: 0;
+    background-color: transparent;
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+    color: var(--wp--preset--color--background);
+    background-color: var(--wp--preset--color--primary);
+}
+
+.wp-block-table.is-style-stripes td,
+.wp-block-table.is-style-stripes th {
+    border-color: transparent;
+}

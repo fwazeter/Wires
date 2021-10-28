@@ -16,7 +16,6 @@
 		"@wordpress/base-styles": "^4.0.2",
 		"@wordpress/prettier-config": "^1.1.1",
 		"@wordpress/stylelint-config": "^19.1.0",
-		"gorko": "^0.2.1",
 		"sass": "^1.26.10",
 		"stylelint": "^13.7.0"
 	},

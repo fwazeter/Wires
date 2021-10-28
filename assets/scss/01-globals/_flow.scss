@@ -1,0 +1,28 @@
+/**
+ * Rhythm and flow of spacing, etc related properties.
+ *
+ * @since 0.0.3
+ */
+
+/* Natural flow and rhythm in articles by default */
+/* Stack Compositions */
+
+/**
+ * WordPress's auto-generated wp-container- class
+ * acts like a stack element with an owl selector.
+ *
+ * The inheritance of margin-top from wp-container-*'s
+ * owl selector adds additional margin when the container
+ * has a background to children. This works for all but
+ * the first child, so we're being specific to the container
+ * element, since it handles 'stack' logic.
+ *
+ */
+[class*='wp-container-'].has-background > :first-child {
+  margin-top: 0;
+}
+
+/* Box Compositions */
+.has-background {
+  padding: var(--wp--custom--flow--rate);
+}
