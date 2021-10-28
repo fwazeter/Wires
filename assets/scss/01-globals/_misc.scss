@@ -1,0 +1,28 @@
+/**
+ * Miscellaneous tags and attributes not handled in blocks, theme.json
+ * or large enough to have their own file.
+ */
+
+/* Remove default margin - may not need, do we have dl, dd tags in blocks? */
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Inherit fonts for inputs and buttons - button block uses <a> tag */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* both pre and code have to be established here to override
+   if these aren't set, the browser overrides the block style font-family
+   but if they are set, then they can be overridden.
+*/
+pre,
+code {
+  font-family: var(--wp--preset--font-family--mono);
+}
