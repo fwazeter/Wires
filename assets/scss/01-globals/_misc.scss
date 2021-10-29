@@ -26,3 +26,25 @@ pre,
 code {
   font-family: var(--wp--preset--font-family--mono);
 }
+
+/* Make images easy to work with by default,
+    potentially add <picture>.
+    Maybe not necessary - WP wraps images in <figure> captions
+
+img {
+  display: block;
+  max-width: 100%;
+} */
+
+/* blur images without an alt tag */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* Block styles won't override without this */
+blockquote, figure {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}

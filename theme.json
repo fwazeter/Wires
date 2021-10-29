@@ -85,11 +85,13 @@
 			},
 			"flow": {
 				"rate": "var(--wp--custom--space-2)"
-			}
+			},
+			"content-size": "60rem",
+			"wide-wize": "75rem"
 		},
 		"layout": {
-			"contentSize": "clamp(16rem, 60vw, 90rem)",
-			"wideSize": "clamp(16rem, 80vw, 90rem)"
+			"contentSize": "var(--wp--custom--content-size)",
+			"wideSize": "var(--wp--custom--wide-size)"
 		},
 		"spacing": {
 			"customMargin": true,

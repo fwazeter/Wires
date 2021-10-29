@@ -1,0 +1,11 @@
+/**
+ * WP Image Block CSS.
+ * Replaces style.css & theme.css
+ *
+ * @url https://github.com/WordPress/gutenberg/blob/trunk/packages/block-library/src/image/style.scss
+ * @url https://github.com/WordPress/gutenberg/blob/trunk/packages/block-library/src/image/theme.scss
+ * @since 0.0.4
+ */
+.wp-block-image {
+    margin: 0;
+}
