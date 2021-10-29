@@ -90,3 +90,16 @@ Prefix: --wp--custom
 --space-4:   2.5em;     /* 40px */
 --space-5:   3em;       /* 48px */
 ```
+
+### Breakpoints
+
+```scss
+@media (max-width: 782px);
+```
+
+## Block Changes
+
+Some blocks in WordPress core have settings for either backwards compatibility or because of
+having to cater to a wide range of design-situations that are not theme specific. Because we have more individualized
+control over how the theme works - we can eliminate and reduce some of the unnecessary elements.
+

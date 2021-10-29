@@ -1,0 +1,11 @@
+/**
+ * WP Group Block CSS.
+ * Replaces style.css & theme.css
+ *
+ * @url https://github.com/WordPress/gutenberg/blob/trunk/packages/block-library/src/group/style.scss
+ * @url https://github.com/WordPress/gutenberg/blob/trunk/packages/block-library/src/group/theme.scss
+ * @since 0.0.4
+ */
+.wp-block-group.has-background > :only-child {
+    margin-bottom: 0;
+}

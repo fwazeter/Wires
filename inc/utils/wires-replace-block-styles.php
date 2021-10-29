@@ -21,6 +21,14 @@ function wires_replace_block_styles() {
         'wp-block-preformatted',
         'wp-block-pullquote',
         'wp-block-table',
+
+        // Media Blocks
+        //'wp-block-image',
+        'wp-block-media-text',
+
+        // Design Blocks
+        'wp-block-group',
+        'wp-block-columns',
     );
     foreach ( $styles as $style ) {
         // Remove the block style
