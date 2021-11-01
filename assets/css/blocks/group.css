@@ -6,6 +6,11 @@
  * @url https://github.com/WordPress/gutenberg/blob/trunk/packages/block-library/src/group/theme.scss
  * @since 0.0.4
  */
+.wp-block-group.has-background {
+    --wp--custom--box-sizing: content-box;
+    box-sizing: var(--wp--custom--box-sizing);
+}
+
 .wp-block-group.has-background > :only-child {
     margin-bottom: 0;
 }

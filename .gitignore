@@ -10,6 +10,7 @@ Thumbs.db
 .cache
 # Intellij settings.
 .idea
+.wp-env.json
 
 # Node modules and output
 node_modules

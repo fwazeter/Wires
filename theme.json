@@ -4,7 +4,9 @@
 	"settings": {
 		"border": {
 			"customRadius": true,
-			"customColor": true
+			"customColor": true,
+			"customStyle": true,
+			"customWidth": true
 		},
 		"color": {
 			"background": true,
@@ -47,7 +49,178 @@
 					"color": "#000",
 					"name": "Black"
 				}
-
+			],
+			"gradients": [
+				{
+					"slug": "vertical-secondary-to-tertiary",
+					"gradient": "linear-gradient(to bottom,var(--wp--preset--color--secondary) 0%,var(--wp--preset--color--tertiary) 100%)",
+					"name": "Vertical secondary to tertiary"
+				},
+				{
+					"slug": "vertical-secondary-to-background",
+					"gradient": "linear-gradient(to bottom,var(--wp--preset--color--secondary) 0%,var(--wp--preset--color--background) 100%)",
+					"name": "Vertical secondary to background"
+				},
+				{
+					"slug": "vertical-tertiary-to-background",
+					"gradient": "linear-gradient(to bottom,var(--wp--preset--color--tertiary) 0%,var(--wp--preset--color--background) 100%)",
+					"name": "Vertical tertiary to background"
+				},
+				{
+					"slug": "diagonal-primary-to-foreground",
+					"gradient": "linear-gradient(to bottom right,var(--wp--preset--color--primary) 0%,var(--wp--preset--color--foreground) 100%)",
+					"name": "Diagonal primary to foreground"
+				},
+				{
+					"slug": "diagonal-secondary-to-background",
+					"gradient": "linear-gradient(to bottom right,var(--wp--preset--color--secondary) 50%,var(--wp--preset--color--background) 50%)",
+					"name": "Diagonal secondary to background"
+				},
+				{
+					"slug": "diagonal-background-to-secondary",
+					"gradient": "linear-gradient(to bottom right,var(--wp--preset--color--background) 50%,var(--wp--preset--color--secondary) 50%)",
+					"name": "Diagonal background to secondary"
+				},
+				{
+					"slug": "diagonal-tertiary-to-background",
+					"gradient": "linear-gradient(to bottom right,var(--wp--preset--color--tertiary) 50%,var(--wp--preset--color--background) 50%)",
+					"name": "Diagonal tertiary to background"
+				},
+				{
+					"slug": "diagonal-background-to-tertiary",
+					"gradient": "linear-gradient(to bottom right,var(--wp--preset--color--background) 50%,var(--wp--preset--color--tertiary) 50%)",
+					"name": "Diagonal background to tertiary"
+				},
+				{
+					"slug": "offset-diagonal-primary-to-foreground",
+					"gradient": "linear-gradient(var(--wp--custom--gradient-angle),var(--wp--preset--color--primary) 50%,var(--wp--preset--color--foreground) 50%)",
+					"name": "Offset Diagonal primary to foreground"
+				},
+				{
+					"slug": "offset-diagonal-primary-to-background",
+					"gradient": "linear-gradient(var(--wp--custom--gradient-angle),var(--wp--preset--color--primary) 50%,var(--wp--preset--color--background) 50%)",
+					"name": "Offset Diagonal primary to background"
+				},
+				{
+					"slug": "offset-diagonal-secondary-to-background",
+					"gradient": "linear-gradient(var(--wp--custom--gradient-angle),var(--wp--preset--color--secondary) 50%,var(--wp--preset--color--background) 50%)",
+					"name": "Offset Diagonal secondary to background"
+				},
+				{
+					"slug": "offset-diagonal-background-to-secondary",
+					"gradient": "linear-gradient(var(--wp--custom--gradient-angle),var(--wp--preset--color--background) 50%,var(--wp--preset--color--secondary) 50%)",
+					"name": "Offset Diagonal background to secondary"
+				},
+				{
+					"slug": "offset-diagonal-tertiary-to-background",
+					"gradient": "linear-gradient(var(--wp--custom--gradient-angle),var(--wp--preset--color--tertiary) 50%,var(--wp--preset--color--background) 50%)",
+					"name": "Offset Diagonal tertiary to background"
+				},
+				{
+					"slug": "offset-diagonal-background-to-tertiary",
+					"gradient": "linear-gradient(var(--wp--custom--gradient-angle),var(--wp--preset--color--background) 50%,var(--wp--preset--color--tertiary) 50%)",
+					"name": "Offset Diagonal background to tertiary"
+				},
+				{
+					"slug": "offset-diagonal-transparent-to-background",
+					"gradient": "linear-gradient(var(--wp--custom--gradient-angle),transparent 50%,var(--wp--preset--color--background) 50%)",
+					"name": "Offset Diagonal transparent to background"
+				},
+				{
+					"slug": "offset-diagonal-background-to-transparent",
+					"gradient": "linear-gradient(var(--wp--custom--gradient-angle),var(--wp--preset--color--background) 50%, transparent 50%)",
+					"name": "Offset Diagonal background to transparent"
+				},
+				{
+					"slug": "offset-diagonal-transparent-to-primary",
+					"gradient": "linear-gradient(var(--wp--custom--gradient-angle),transparent 50%,var(--wp--preset--color--primary) 50%)",
+					"name": "Offset Diagonal transparent to primary"
+				},
+				{
+					"slug": "offset-diagonal-primary-to-transparent",
+					"gradient": "linear-gradient(var(--wp--custom--gradient-angle),var(--wp--preset--color--primary) 50%, transparent 50%)",
+					"name": "Offset Diagonal primary to transparent"
+				},
+				{
+					"slug": "offset-diagonal-transparent-to-secondary",
+					"gradient": "linear-gradient(var(--wp--custom--gradient-angle),transparent 50%,var(--wp--preset--color--secondary) 50%)",
+					"name": "Offset Diagonal background to tertiary"
+				},
+				{
+					"slug": "offset-diagonal-secondary-to-transparent",
+					"gradient": "linear-gradient(var(--wp--custom--gradient-angle),var(--wp--preset--color--secondary) 50%,transparent 50%)",
+					"name": "Offset Diagonal secondary to transparent"
+				},
+				{
+					"slug": "offset-diagonal-transparent-to-tertiary",
+					"gradient": "linear-gradient(var(--wp--custom--gradient-angle),transparent 50%,var(--wp--preset--color--tertiary) 50%)",
+					"name": "Offset Diagonal background to tertiary"
+				},
+				{
+					"slug": "offset-diagonal-tertiary-to-transparent",
+					"gradient": "linear-gradient(var(--wp--custom--gradient-angle),var(--wp--preset--color--tertiary) 50%,transparent 50%)",
+					"name": "Offset Diagonal tertiary to transparent"
+				},
+				{
+					"slug": "horizontal-divider-primary-to-background",
+					"gradient": "linear-gradient(180deg,var(--wp--preset--color--primary) 50%, var(--wp--preset--color--background) 50%)",
+					"name": "Horizontal Divider primary to background"
+				},
+				{
+					"slug": "horizontal-divider-background-to-primary",
+					"gradient": "linear-gradient(180deg,var(--wp--preset--color--background) 50%, var(--wp--preset--color--primary) 50%)",
+					"name": "Horizontal Divider primary to background"
+				},
+				{
+					"slug": "horizontal-divider-secondary-to-background",
+					"gradient": "linear-gradient(180deg,var(--wp--preset--color--secondary) 50%, var(--wp--preset--color--background) 50%)",
+					"name": "Horizontal Divider secondary to background"
+				},
+				{
+					"slug": "horizontal-divider-background-to-secondary",
+					"gradient": "linear-gradient(180deg,var(--wp--preset--color--background) 50%, var(--wp--preset--color--secondary) 50%)",
+					"name": "Horizontal Divider secondary to background"
+				},
+				{
+					"slug": "horizontal-divider-tertiary-to-background",
+					"gradient": "linear-gradient(180deg,var(--wp--preset--color--tertiary) 50%, var(--wp--preset--color--background) 50%)",
+					"name": "Horizontal Divider tertiary to background"
+				},
+				{
+					"slug": "horizontal-divider-background-to-tertiary",
+					"gradient": "linear-gradient(180deg,var(--wp--preset--color--background) 50%, var(--wp--preset--color--tertiary) 50%)",
+					"name": "Horizontal Divider tertiary to background"
+				},
+				{
+					"slug": "horizontal-divider-primary-to-secondary",
+					"gradient": "linear-gradient(180deg,var(--wp--preset--color--primary) 50%, var(--wp--preset--color--secondary) 50%)",
+					"name": "Horizontal Divider primary to secondary"
+				},
+				{
+					"slug": "horizontal-divider-secondary-to-primary",
+					"gradient": "linear-gradient(180deg,var(--wp--preset--color--secondary) 50%, var(--wp--preset--color--primary) 50%)",
+					"name": "Horizontal Divider secondary to primary"
+				},
+				{
+					"slug": "horizontal-divider-primary-to-tertiary",
+					"gradient": "linear-gradient(180deg,var(--wp--preset--color--primary) 50%, var(--wp--preset--color--tertiary) 50%)",
+					"name": "Horizontal Divider primary to tertiary"
+				},
+				{
+					"slug": "horizontal-divider-tertiary-to-primary",
+					"gradient": "linear-gradient(180deg,var(--wp--preset--color--tertiary) 50%, var(--wp--preset--color--primary) 50%)",
+					"name": "Horizontal Divider tertiary to primary"
+				},
+				{
+					"slug": "horizontal-divider-secondary-to-tertiary",
+					"gradient": "linear-gradient(180deg,var(--wp--preset--color--secondary) 50%, var(--wp--preset--color--tertiary) 50%)",
+					"name": "Horizontal Divider secondary to tertiary"
+				},
+				{
+					"slug": "horizontal-divider-tertiary-to-secondary",
+					"gradient": "linear-gradient(180deg,var(--wp--preset--color--tertiary) 50%, var(--wp--preset--color--secondary) 50%)",
+					"name": "Horizontal Divider tertiary to secondary"
+				}
 			]
 		},
 		"custom": {
@@ -86,8 +259,10 @@
 			"flow": {
 				"rate": "var(--wp--custom--space-2)"
 			},
-			"content-size": "60rem",
-			"wide-wize": "75rem"
+			"content-size": "75ch",
+			"wide-size": "75rem",
+			"box-sizing": "border-box",
+			"gradient-angle": "175deg"
 		},
 		"layout": {
 			"contentSize": "var(--wp--custom--content-size)",
@@ -156,6 +331,13 @@
 				}
 			]
 
+		},
+		"blocks": {
+			"core/paragraph": {
+				"border": {
+					"customRadius": true
+				}
+			}
 		}
 	},
 	"styles": {
@@ -225,6 +407,7 @@
 			}
 		},
 		"blocks": {
+
 		}
 	}
 }

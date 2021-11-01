@@ -24,11 +24,13 @@ function wires_replace_block_styles() {
 
         // Media Blocks
         //'wp-block-image',
-        'wp-block-media-text',
+        //'wp-block-media-text',
 
-        // Design Blocks
         'wp-block-group',
+        // Design Blocks
         'wp-block-columns',
+        'wp-block-buttons',
+        'wp-block-button'
     );
     foreach ( $styles as $style ) {
         // Remove the block style
@@ -47,3 +49,4 @@ function wires_replace_block_styles() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'wires_replace_block_styles', 20 );
+add_action( 'enqueue_block_editor_assets', 'wires_replace_block_styles', 20 );

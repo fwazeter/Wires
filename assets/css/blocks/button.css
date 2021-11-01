@@ -1,0 +1,101 @@
+/**
+ * Button Replacement - eliminating backwards compat markup.
+ *
+ * @url https://github.com/WordPress/gutenberg/blob/trunk/packages/block-library/src/button/style.scss
+ */
+
+.wp-block-button__link {
+    background-color: var(--wp--preset--color--secondary);
+    border-radius: var(--wp--custom--border--radius);
+    box-shadow:none;
+    color: var(--wp--preset--color--primary);
+    cursor:pointer;
+    display:inline-block;
+    font-size: var(--wp--preset--font-size--medium);
+    padding-inline-start: var(--wp--style--block-gap);
+    padding-inline-end: var(--wp--style--block-gap);
+    padding-block-start: calc(var(--wp--style--block-gap) / 2);
+    padding-block-end: calc(var(--wp--style--block-gap) / 2);
+    text-align:center;
+    text-decoration:none;
+    word-break:break-word;
+}
+
+.wp-block-button__link:active,
+.wp-block-button__link:focus,
+.wp-block-button__link:hover,
+.wp-block-button__link:visited {
+    color: var(--wp--preset--color--secondary);
+    background-color: var(--wp--preset--color--primary);
+}
+.wp-block-button__link.aligncenter {
+    text-align:center
+}
+.wp-block-button__link.alignright {
+    text-align:right
+}
+
+.wp-block-button__link.has-background {
+    padding-inline-start: var(--wp--style--block-gap);
+    padding-inline-end: var(--wp--style--block-gap);
+    padding-block-start: calc(var(--wp--style--block-gap) / 2);
+    padding-block-end: calc(var(--wp--style--block-gap) / 2);
+}
+
+.is-style-outline>.wp-block-button__link,
+.wp-block-button__link.is-style-outline {
+    --wp--custom--border--size: calc(var(--wp--custom--space-025) * .5);
+    border: var(--wp--custom--border--size) solid;
+    padding-inline-start: calc(var(--wp--style--block-gap) - var(--wp--custom--border--size));
+    padding-inline-end: calc(var(--wp--style--block-gap) - var(--wp--custom--border--size));
+    padding-block-start: calc((var(--wp--style--block-gap) / 2) - var(--wp--custom--border--size));
+    padding-block-end: calc((var(--wp--style--block-gap) / 2) - var(--wp--custom--border--size));
+}
+.is-style-outline>.wp-block-button__link:not(.has-text-color),
+.wp-block-button__link.is-style-outline:not(.has-text-color) {
+    color: var(--wp--preset--color--primary);
+}
+.is-style-outline>.wp-block-button__link:not(.has-background),
+.wp-block-button__link.is-style-outline:not(.has-background) {
+    background-color:transparent;
+}
+
+.is-style-outline>.wp-block-button__link:active,
+.is-style-outline>.wp-block-button__link:focus,
+.is-style-outline>.wp-block-button__link:hover,
+.is-style-outline>.wp-block-button__link:visited {
+    color: var(--wp--preset--color--primary);
+    background-color: var(--wp--preset--color--secondary);
+}
+
+.wp-block-buttons>.wp-block-button.has-custom-width {
+    max-width:none
+}
+.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link {
+    width:100%
+}
+.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link {
+    font-size:inherit
+}
+.wp-block-buttons>.wp-block-button.wp-block-button__width-25 {
+    width:calc(25% - var(--wp--style--block-gap, .5em) * .75)
+}
+.wp-block-buttons>.wp-block-button.wp-block-button__width-50 {
+    width:calc(50% - var(--wp--style--block-gap, .5em) * .5)
+}
+.wp-block-buttons>.wp-block-button.wp-block-button__width-75 {
+    width:calc(75% - var(--wp--style--block-gap, .5em) * .25)
+}
+.wp-block-buttons>.wp-block-button.wp-block-button__width-100 {
+    flex-basis:100%;
+    width:100%
+}
+.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-25 {
+    width:25%
+}
+.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-50 {
+    width:50%
+}
+.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-75 {
+    width:75%
+}
