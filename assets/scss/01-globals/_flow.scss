@@ -43,8 +43,13 @@
 }
 
 @media (max-width: 1000px) {
-  .wp-block-post-content > :not(.alignfull),
-  .wp-block-post-content > :not(.has-background) {
-    padding: 0 var(--wp--custom--flow--rate);
+  .wp-block-post-content > :not(figure),
+  .wp-block-post-content > :not(.has-background),
+  .wp-block-post-content > :not(.alignfull)
+  {
+    padding-inline-start: var(--wp--custom--flow--rate);
+    padding-inline-end: var(--wp--custom--flow--rate);
+    padding-block-start: 0;
+    padding-block-end: 0;
   }
 }

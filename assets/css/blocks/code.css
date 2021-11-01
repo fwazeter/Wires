@@ -7,6 +7,8 @@
  * @since 0.0.3
  */
 .wp-block-code {
+    --wp--custom--box-sizing: content-box;
+    box-sizing: var(--wp--custom--box-sizing);
     color: var(--wp--preset--color--luminous-vivid-amber);
     background-color: var(--wp--preset--color--foreground);
     padding: var(--wp--custom--flow--rate);
