@@ -7,6 +7,7 @@
  * @since 0.0.3
  */
 .wp-block-pullquote {
+    box-sizing: content-box;
     padding-block-start: var(--wp--custom--space-5);
     padding-block-end: var(--wp--custom--space-5);
 

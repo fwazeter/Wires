@@ -19,12 +19,22 @@
  * element, since it handles 'stack' logic.
  *
  */
-[class*='wp-container-'].has-background > :first-child {
+/**[class*='wp-container-'].has-background > :first-child {
+  margin-top: unset;
+} */
+
+[class*='wp-container-'] .wp-block-cover {
+  margin-top: 0;
+}
+
+.wp-site-blocks > header,
+.wp-site-blocks > footer {
   margin-top: 0;
 }
 
 /* Box Compositions */
 .has-background {
+  box-sizing: content-box;
   padding: var(--wp--custom--flow--rate);
   outline: 0.125rem solid transparent;
   outline-offset: -0.125rem;
@@ -37,11 +47,28 @@
 @media (max-width: 782px) {
   body {
     --wp--custom--scale: 1.125;
-    --wp--style--block-gap: var(--wp--custom--space-025);
+    --wp--style--block-gap: var(--wp--custom--space-05);
     --wp--custom--flow--rate: var(--wp--custom--space-1);
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  pre,
+  cite {
+    padding-inline-start: var(--wp--style--block-gap);
+    padding-inline-end: var(--wp--style--block-gap);
+  }
+  h1.wp-block-post-title,
+  p.wp-block-post-author__name {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+  }
 }
-
+/**
 @media (max-width: 1000px) {
   .wp-block-post-content > :not(figure),
   .wp-block-post-content > :not(.has-background),
@@ -53,3 +80,4 @@
     padding-block-end: 0;
   }
 }
+*/
