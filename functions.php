@@ -18,3 +18,6 @@ require_once 'inc/utils/wires-replace-block-styles.php';
 
 // Add new inlines
 require_once 'inc/utils/wires-safe-style-attrs.php';
+
+// Register Block Patterns
+require_once 'inc/block-patterns/block-patterns.php';

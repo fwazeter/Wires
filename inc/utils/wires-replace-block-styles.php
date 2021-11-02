@@ -28,9 +28,10 @@ function wires_replace_block_styles() {
 
         'wp-block-group',
         // Design Blocks
-        'wp-block-columns',
+        // 'wp-block-columns',
         'wp-block-buttons',
-        'wp-block-button'
+        'wp-block-button',
+        'wp-block-separator'
     );
     foreach ( $styles as $style ) {
         // Remove the block style
@@ -43,8 +44,7 @@ function wires_replace_block_styles() {
         if ( file_exists( get_theme_file_path( "assets/css/blocks/{$register_style}.css" ) ) ) {
             wp_register_style( $style,
                 $style_url,
-                '',
-                WIRES_VERSION );
+                '');
         }
     }
 }

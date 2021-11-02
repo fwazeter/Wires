@@ -1,6 +1,9 @@
 {
 	"$schema": "https://json.schemastore.org/theme-v1.json",
 	"version": 1,
+	"customTemplates": [
+
+	],
 	"settings": {
 		"border": {
 			"customRadius": true,
@@ -244,6 +247,9 @@
 			"font-4": "calc(var(--wp--custom--font-3) * var(--wp--custom--scale))",
 			"font-5": "calc(var(--wp--custom--font-4) * var(--wp--custom--scale))",
 			"font-6": "calc(var(--wp--custom--font-5) * var(--wp--custom--scale))",
+			"typography": {
+				"colossal": "clamp(4rem, 8vw, 6.25rem)"
+			},
 			"space-025":"calc(var(--wp--custom--space-1) * .25)",
 			"space-05": "calc(var(--wp--custom--space-1) * .5)",
 			"space-075": "calc(var(--wp--custom--space-1) * .75)",
@@ -272,7 +278,7 @@
 			"customMargin": true,
 			"customPadding": true,
 			"blockGap": true,
-			"units": ["rem", "em", "vh", "vw", "ch"]
+			"units": ["rem", "em", "%", "vh", "vw", "ch"]
 		},
 		"typography": {
 			"dropCap": false,
@@ -328,6 +334,11 @@
 					"slug": "gigantic",
 					"size": "var(--wp--custom--font-6)",
 					"name": "Gigantic"
+				},
+				{
+					"slug": "colossal",
+					"size": "var(--wp--custom--typography--colossal)",
+					"name": "Colossal"
 				}
 			]
 
@@ -409,5 +420,19 @@
 		"blocks": {
 
 		}
-	}
+	},
+	"templateParts": [
+		{
+			"name": "header",
+			"area": "header"
+		},
+		{
+			"name": "header-post",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"area": "footer"
+		}
+	]
 }
