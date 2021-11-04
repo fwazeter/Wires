@@ -29,6 +29,7 @@ if ( ! function_exists( 'wires_register_block_patterns' ) ) :
                 'section-split-background-media-text-reverse',
                 'section-colossal-header-text',
                 'section-double-cover-fixed-image',
+                'section-triptych-horizontal-scroll',
 
                 // Headers
                 'header-center-buttons',

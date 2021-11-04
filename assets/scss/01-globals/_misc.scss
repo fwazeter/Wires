@@ -48,3 +48,38 @@ blockquote, figure {
   margin-inline-start: 0;
   margin-inline-end: 0;
 }
+
+/* Columns custom block style, probably move later */
+
+@media (max-width: #{ ($break-large) }) {
+
+  .is-columns-reel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: var(--wp--style--block-gap);
+    scrollbar-color: var(--wp--preset--color--secondary) var(--wp--preset--color--primary);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .is-columns-reel::-webkit-scrollbar {
+    height: 1rem;
+  }
+
+  .is-columns-reel::-webkit-scrollbar-track {
+    height: var(--wp--preset--color--primary);
+  }
+
+  .is-columns-reel::-webkit-scrollbar-thumb {
+    background-color: var(--wp--preset--color--primary);
+  }
+
+  .is-columns-reel > .wp-block-column {
+    flex: 0 0 auto !important;
+    width: 65%;
+  }
+  .is-columns-reel > .wp-block-column > .wp-block-cover {
+    min-height: 50vh !important;
+  }
+}
+

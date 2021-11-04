@@ -10,12 +10,23 @@ if ( ! function_exists( 'wires_styles' ) ) {
             'wires-style',
             get_theme_file_uri( 'assets/css/style.css' ),
             '',
-
+            WIRES_VERSION
         );
     }
 }
 add_action( 'wp_enqueue_scripts', 'wires_styles' );
 add_action( 'enqueue_block_editor_assets', 'wires_styles' );
+
+function wires_register_block_styles() {
+    wp_enqueue_script(
+        'rich-editor',
+        get_theme_file_uri( 'inc/block-styles/reels.js' ),
+        array( 'wp-blocks', 'wp-dom' ),
+        WIRES_VERSION,
+        true
+    );
+}
+add_action( 'enqueue_block_editor_assets', 'wires_register_block_styles' );
 
 /**
  * Enqueue Editor Styles to universalize look
