@@ -44,11 +44,13 @@
   padding: 0;
 }
 
-@media (max-width: 782px) {
+@media (max-width: #{ ($break-medium) }) {
   body {
     --wp--custom--scale: 1.125;
     --wp--style--block-gap: var(--wp--custom--space-05);
     --wp--custom--flow--rate: var(--wp--custom--space-1);
+    --wp--custom--typography--colossal: clamp(3rem, 6vw, 4rem);
+    --wp--custom--font-size-6: var(--wp--custom--font-size-5);
   }
   h1,
   h2,
